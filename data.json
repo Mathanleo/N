@@ -1,7 +1,7 @@
 {
   "name": "Bruce Wayne",
   "address": {
-    "street": "Wayne Manor",
-    "city": "Gotham"
+    "city": "Gotham",
+    "street": "Wayne Manor"
   }
 }

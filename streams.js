@@ -9,12 +9,14 @@ const readableStream = fs.createReadStream("./file.txt", {
 const writeableStream = fs.createWriteStream("./file2.txt");
 
 readableStream.pipe(writeableStream);
+
 // readableStream.on("data", (chunk) => {
 //   console.log(chunk);
 //   writeableStream.write(chunk);
 // });
 
 const gzip = zlib.createGzip();
+
 readableStream.pipe(gzip).pipe(fs.createWriteStream("./file2.txt.gz"));
 
 readableStream.on("end", () => {
