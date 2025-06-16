@@ -29,6 +29,7 @@ const drinkMachine = new DrinkMachine();
 
 pizzaShop.on("order", (size, topping) => {
   console.log(`Order received! Baking a ${size} pizza with ${topping}`);
+  
   drinkMachine.serveDrink(size);
 });
 
