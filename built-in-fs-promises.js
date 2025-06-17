@@ -2,14 +2,15 @@ const fs = require("node:fs/promises");
 
 console.log("First");
 
-async function readFile() {
+const readFile = async () => {
   try {
     const data = await fs.readFile("file.txt", "utf8");
+
     console.log(data);
   } catch (err) {
     console.log(err);
   }
-}
+};
 
 readFile();
 
