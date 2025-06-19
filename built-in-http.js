@@ -1,5 +1,5 @@
-const http = require("node:http");
 const fs = require("node:fs");
+const http = require("node:http");
 
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
@@ -11,9 +11,9 @@ const server = http.createServer((req, res) => {
   } else if (req.url === "/api") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(
-      JSON.stringify({
-        firstName: "Bruce",
-        lastName: "Wayne",
+      JSON.stringify({ 
+        firstName: "Mathan",
+        lastName: "U",
       })
     );
   } else {
@@ -25,8 +25,10 @@ const server = http.createServer((req, res) => {
 /** HTML template
 const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
-  const name = "Vishwas";
+  const name = "Mathan";
+
   let html = fs.readFileSync(`${__dirname}/index.html`, "utf8");
+  
   html = html.replace("{{name}}", name);
   res.end(html);
 });
@@ -42,12 +44,13 @@ const server = http.createServer((req, res) => {
 /** JSON response
 const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "application/json" });
+
   const superHero = {
-    firstName: "Bruce",
-    lastName: "Wayne",
+    firstName: "Mathan",
+    lastName: "U",
   };
+
   res.end(superHero);
-   
 });
 */
 
